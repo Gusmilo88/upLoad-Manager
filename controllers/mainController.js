@@ -2,12 +2,15 @@ const { readJSON } = require("../data")
 
 module.exports = {
     home : (req, res) => {
-        let productsOneImage = readJSON("productsOneImage.json")
-        let productsMultipleImages = readJSON("productsMultipleImages.json")
+        let productsOneImage = readJSON("productsOneImage.json");
+        let productsMultipleImages = readJSON("productsMultipleImages.json");
+        let productsMainImage = readJSON("productsMainImage.json")
+
 
         return res.render("index", {
             productsOneImage,
-            productsMultipleImages
+            productsMultipleImages,
+            productsMainImage
         })
     }
 }
